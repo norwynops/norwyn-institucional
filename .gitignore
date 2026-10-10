@@ -1,0 +1,9 @@
+node_modules/
+.next/
+out/
+.vercel/
+.env*
+*.tsbuildinfo
+test-results/
+qa/
+brand/originals/norwyn_v2_ads_mockup.html

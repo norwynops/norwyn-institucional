@@ -1,0 +1,1 @@
+export default function NotFound(){return <main className="error-page"><p className="eyebrow">NORWYN / 404</p><h1>Página não encontrada.</h1><a className="button button-gold" href="/">Voltar ao início</a></main>;}
