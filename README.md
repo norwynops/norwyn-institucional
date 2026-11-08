@@ -15,7 +15,7 @@ npm run build
 npm run verify
 ```
 
-`npm run verify` usa o servidor em `http://localhost:3100` ou `BASE_URL` para validar os viewports 375, 390, 768 e 1440, menu, portal, imagens, links e overflow. Instale o navegador com `npx playwright install chromium` quando necessario. Capturas ficam em `qa/` (ignorado).
+`npm run verify` usa o servidor em `http://localhost:3100` ou `BASE_URL` para validar os viewports 375, 390, 768 e 1440, menu, link de acesso ao app, imagens, links e overflow. Instale o navegador com `npx playwright install chromium` quando necessario. Capturas ficam em `qa/` (ignorado).
 
 ## Destino autorizado
 
@@ -24,7 +24,7 @@ npm run verify
 - Projeto: `norwyn-institucional`.
 - Supabase nao e utilizado.
 
-Nenhum dominio personalizado deve ser adicionado nesta etapa. O projeto experimental `prj_paRixfclzSp7vLIsBAy8KQRsdwmG` permanece fora do escopo.
+O dominio oficial existente e `https://www.norwyn.com.br`, verificado no projeto Vercel. Esta entrega utiliza a configuracao existente, sem alterar DNS ou adicionar dominios. O projeto experimental `prj_paRixfclzSp7vLIsBAy8KQRsdwmG` permanece fora do escopo.
 
 ## Identidade
 
@@ -34,6 +34,6 @@ Paleta do manual: #0B1F3A, #D0DEE8, #D4A64A, #0D1117, #222831, #667280, #F2F4F7.
 
 ## Estados e publicacao
 
-Contato real via `mailto:norwyn.ops@gmail.com`. Portal apenas informa preparacao e destino futuro `app.norwyn.com.br`. Solucoes e iniciativas nao sao apresentadas como produtos prontos ou cases de clientes. Privacidade e termos aparecem como em preparacao, sem documentos ficticios.
+Contato real via `mailto:norwyn.ops@gmail.com`. O botao Entrar abre diretamente `https://app.norwyn.com.br`. A secao Ecossistema apresenta, nesta ordem: Norwyn Core, Jornada e Momentum BJJ. Momentum e HistoGol90 ficam fora da apresentacao publica por enquanto. Solucoes e iniciativas nao sao apresentadas como produtos prontos ou cases de clientes. Privacidade e termos aparecem como em preparacao, sem documentos ficticios.
 
-Esta versao temporaria usa `noindex` e robots com bloqueio de rastreamento. O sitemap e metadados usam `SITE_URL`, ou `VERCEL_URL` no build. Na futura publicacao oficial: aprovar conteudo e documentos juridicos, configurar `SITE_URL`, habilitar indexacao e canonical, validar producao e somente entao planejar o dominio em uma entrega separada.
+Esta versao temporaria usa `noindex` e robots com bloqueio de rastreamento. O sitemap e metadados usam `SITE_URL`, ou `VERCEL_URL` no build. A publicacao destes ajustes utiliza o dominio oficial ja configurado. A revisao de documentos juridicos, `SITE_URL`, indexacao e canonical permanece para uma entrega separada; estes ajustes preservam o comportamento atual.
