@@ -23,10 +23,8 @@ try {
     assert.deepEqual(result.brokenImages,[]);
     assert.deepEqual(result.missingTargets,[]);
     assert.equal(result.h1,1);assert.equal(result.mail,true);
-    await page.getByRole('button',{name:'Entrar',exact:true}).click();
-    await page.getByText('Portal em preparação',{exact:true}).waitFor({state:'visible'});
-    await page.keyboard.press('Escape');
-    await page.getByText('Portal em preparação',{exact:true}).waitFor({state:'hidden'});
+    assert.equal(await page.getByRole('link',{name:'Entrar',exact:true}).getAttribute('href'),'https://app.norwyn.com.br');
+    assert.equal(await page.getByText('Portal em preparação',{exact:true}).count(),0);
     if(width<=900){await page.getByRole('button',{name:'Abrir menu'}).click();await page.getByRole('navigation',{name:'Principal',exact:true}).getByRole('link',{name:'Soluções',exact:true}).click();assert.equal(await page.getByRole('button',{name:'Abrir menu'}).getAttribute('aria-expanded'),'false');}
     await page.goto(base,{waitUntil:'networkidle'});
     await page.screenshot({path:`qa/${width}.png`,fullPage:true});
