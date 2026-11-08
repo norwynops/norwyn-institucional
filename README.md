@@ -37,3 +37,7 @@ Paleta do manual: #0B1F3A, #D0DEE8, #D4A64A, #0D1117, #222831, #667280, #F2F4F7.
 Contato real via `mailto:norwyn.ops@gmail.com`. O botao Entrar abre diretamente `https://app.norwyn.com.br`. A secao Ecossistema apresenta, nesta ordem: Norwyn Core, Jornada e Momentum BJJ. Momentum e HistoGol90 ficam fora da apresentacao publica por enquanto. Solucoes e iniciativas nao sao apresentadas como produtos prontos ou cases de clientes. Privacidade e termos aparecem como em preparacao, sem documentos ficticios.
 
 Esta versao temporaria usa `noindex` e robots com bloqueio de rastreamento. O sitemap e metadados usam `SITE_URL`, ou `VERCEL_URL` no build. A publicacao destes ajustes utiliza o dominio oficial ja configurado. A revisao de documentos juridicos, `SITE_URL`, indexacao e canonical permanece para uma entrega separada; estes ajustes preservam o comportamento atual.
+
+## Favicon e titulo da aba
+
+O titulo da aba e `Norwyn`. O favicon usa PNG com canal alpha e referencia versionada (`/icon.png?v=2`) para atualizar o cache dos navegadores. A fonte transparente de 256 px esta em `brand/favicon-symbol-transparent.png`, preparada com assistencia de IA a partir do simbolo oficial. `npm run assets` preserva essa transparencia ao gerar `public/icon.png`; o icone Apple permanece independente.

@@ -15,7 +15,8 @@ for(let i=0;i<letters.length;i+=4){const brightness=Math.max(letters[i],letters[
 await sharp(letters,{raw:info}).webp({lossless:true}).toFile(`${target}/wordmark-dark.webp`);
 await sharp(source('15_43_57')).extract({left:765,top:49,width:139,height:140}).webp({quality:96}).toFile(`${target}/symbol-dark.webp`);
 await sharp(source('15_44_22')).extract({left:580,top:140,width:390,height:425}).resize(180,180,{fit:'contain',background:'#fff'}).png().toFile('public/apple-touch-icon.png');
-await sharp(source('15_44_22')).extract({left:580,top:140,width:390,height:425}).resize(48,48,{fit:'contain',background:'#fff'}).png().toFile('public/icon.png');
+// Transparent favicon cutout is stored separately so asset regeneration preserves its alpha.
+await sharp('brand/favicon-symbol-transparent.png').resize(48,48,{fit:'contain',background:{r:0,g:0,b:0,alpha:0}}).png().toFile('public/icon.png');
 const manifest = [];
 for (const name of await readdir(original)) {
   if (!name.endsWith('.jpg')) continue;
